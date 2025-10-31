@@ -1,5 +1,4 @@
 /*! tailwindcss v4.1.16 | MIT License | https://tailwindcss.com */
-@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -8,13 +7,9 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-white: #fff;
-    --spacing: 0.25rem;
-    --font-weight-bold: 700;
-    --radius-xl: 0.75rem;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-family-vazir: "vazir";
   }
 }
 @layer base {
@@ -166,134 +161,16 @@
   }
 }
 @layer utilities {
-  .pointer-events-none {
-    pointer-events: none;
-  }
-  .absolute {
-    position: absolute;
-  }
-  .relative {
-    position: relative;
-  }
-  .inset-0 {
-    inset: calc(var(--spacing) * 0);
-  }
-  .mx-auto {
-    margin-inline: auto;
-  }
-  .mt-10 {
-    margin-top: calc(var(--spacing) * 10);
-  }
-  .block {
-    display: block;
-  }
-  .flex {
-    display: flex;
-  }
-  .h-\[15px\] {
-    height: 15px;
-  }
-  .w-\[15px\] {
-    width: 15px;
-  }
-  .w-full {
-    width: 100%;
-  }
-  .cursor-pointer {
-    cursor: pointer;
-  }
-  .items-center {
-    align-items: center;
-  }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
-  }
-  .overflow-hidden {
-    overflow: hidden;
-  }
-  .rounded-\[10px\] {
-    border-radius: 10px;
-  }
-  .rounded-xl {
-    border-radius: var(--radius-xl);
-  }
-  .border-0 {
-    border-style: var(--tw-border-style);
-    border-width: 0px;
-  }
-  .bg-\[\#1d1d1d\] {
-    background-color: #1d1d1d;
-  }
   .bg-\[\#2b2b2b\] {
     background-color: #2b2b2b;
   }
-  .bg-\[linear-gradient\(180deg\,rgb\(56\,56\,56\)_0\%\,rgb\(36\,36\,36\)_66\%\,rgb\(41\,41\,41\)_100\%\)\] {
-    background-image: linear-gradient(180deg,rgb(56,56,56) 0%,rgb(36,36,36) 66%,rgb(41,41,41) 100%);
-  }
-  .bg-\[radial-gradient\(at_95\%_89\%\,rgb\(15\,15\,15\)_0px\,transparent_50\%\)\,radial-gradient\(at_0\%_100\%\,rgb\(17\,17\,17\)_0px\,transparent_50\%\)\,radial-gradient\(at_0\%_0\%\,rgb\(29\,29\,29\)_0px\,transparent_50\%\)\] {
-    background-image: radial-gradient(at 95% 89%,rgb(15,15,15) 0px,transparent 50%),radial-gradient(at 0% 100%,rgb(17,17,17) 0px,transparent 50%),radial-gradient(at 0% 0%,rgb(29,29,29) 0px,transparent 50%);
-  }
-  .bg-\[repeating-conic-gradient\(rgb\(48\,47\,47\)_0\.0000001\%\,rgb\(51\,51\,51\)_0\.000104\%\)_60\%_60\%\/600\%_600\%\] {
-    background-image: repeating-conic-gradient(rgb(48,47,47) 0.0000001%,rgb(51,51,51) 0.000104%) 60% 60%/600% 600%;
-  }
-  .p-0\.5 {
-    padding: calc(var(--spacing) * 0.5);
-  }
-  .px-\[1\.3em\] {
-    padding-inline: 1.3em;
-  }
-  .py-\[0\.8em\] {
-    padding-block: 0.8em;
-  }
-  .pr-\[1\.2em\] {
-    padding-right: 1.2em;
-  }
-  .text-\[17px\] {
-    font-size: 17px;
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
-  .text-\[\#dadada\] {
-    color: #dadada;
-  }
-  .text-inherit {
-    color: inherit;
+  .font-family-vazir {
+    font-family: var(--font-family-vazir);
   }
   .text-white\/90 {
     color: color-mix(in srgb, #fff 90%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       color: color-mix(in oklab, var(--color-white) 90%, transparent);
-    }
-  }
-  .opacity-10 {
-    opacity: 10%;
-  }
-  .contrast-105 {
-    --tw-contrast: contrast(105%);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .filter {
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .transition-all {
-    transition-property: all;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .duration-300 {
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
-  }
-  .text-shadow-\[0_0_20px_\#4b4b4b\] {
-    text-shadow: 0 0 20px var(--tw-text-shadow-color, #4b4b4b);
-  }
-  .group-hover\:bg-\[\#1a1919\] {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        background-color: #1a1919;
-      }
     }
   }
 }
@@ -3871,102 +3748,7 @@
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-sepia {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-drop-shadow-size {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-text-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-text-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-font-weight: initial;
-      --tw-blur: initial;
-      --tw-brightness: initial;
-      --tw-contrast: initial;
-      --tw-grayscale: initial;
-      --tw-hue-rotate: initial;
-      --tw-invert: initial;
-      --tw-opacity: initial;
-      --tw-saturate: initial;
-      --tw-sepia: initial;
-      --tw-drop-shadow: initial;
-      --tw-drop-shadow-color: initial;
-      --tw-drop-shadow-alpha: 100%;
-      --tw-drop-shadow-size: initial;
-      --tw-duration: initial;
-      --tw-text-shadow-color: initial;
-      --tw-text-shadow-alpha: 100%;
-    }
-  }
+@font-face {
+  font-family: vazir;
+  src: url(../css/fonts/Vazir-FD-WOL.woff2) format("woff2"), url(../css/fonts/Vazir-FD-WOL.woff) format("woff");
 }

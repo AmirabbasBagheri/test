@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @import "animate.css";
+@font-face {
+    font-family: vazir;
+    src: url(../css/fonts/Vazir-FD-WOL.woff2) format("woff2"),
+         url(../css/fonts/Vazir-FD-WOL.woff) format("woff");
+}
+
+@theme{
+    --font-family-vazir: "vazir";
+}
